@@ -48,4 +48,72 @@
       padding: 16px 18px;
       margin: 14px 0;
       border-radius: 16px;
-      text-decor
+      text-decoration: none;
+      color: #ffffff;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background 0.25s ease, transform 0.15s ease;
+    }
+
+    .link:hover {
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
+    }
+
+    .link img {
+      height: 28px;
+      width: auto;
+      opacity: 0.95;
+      flex-shrink: 0;
+    }
+
+    footer {
+      margin-top: 48px;
+      font-size: 0.85rem;
+      color: #9aa2c4;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Sleep Sounds</h1>
+    <p>Calming soundscapes for rest, focus, and deep sleep.</p>
+
+    <!-- APPLE MUSIC -->
+    <a class="link"
+       href="https://music.apple.com/us/playlist/davidfarmersound-favorites/pl.u-qxylX06I3WYXz"
+       target="_blank"
+       rel="noopener">
+      <img src="images/apple-music.png" alt="Apple Music">
+      <span>Listen on Apple Music</span>
+    </a>
+
+    <!-- SPOTIFY (placeholder) -->
+    <a class="link"
+       href="#"
+       aria-disabled="true"
+       onclick="return false;">
+      <img src="images/spotify.png" alt="Spotify">
+      <span>Spotify — coming soon</span>
+    </a>
+
+    <!-- AMAZON MUSIC (placeholder) -->
+    <a class="link"
+       href="#"
+       aria-disabled="true"
+       onclick="return false;">
+      <img src="images/amazon-music.png" alt="Amazon Music">
+      <span>Amazon Music — coming soon</span>
+    </a>
+
+    <footer>
+      © David Farmer
+    </footer>
+
+  </div>
+</body>
+</html>
