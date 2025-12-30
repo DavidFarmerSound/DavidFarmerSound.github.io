@@ -6,9 +6,7 @@
   <title>Sleep Sounds</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -16,8 +14,8 @@
       color: #e6e8ee;
       background:
         linear-gradient(
-          rgba(8, 14, 26, 0.78),
-          rgba(8, 14, 26, 0.92)
+          rgba(8, 14, 26, 0.82),
+          rgba(8, 14, 26, 0.94)
         ),
         url("images/background-ocean.jpg") center / cover no-repeat fixed;
       min-height: 100vh;
@@ -26,39 +24,52 @@
     .container {
       max-width: 640px;
       margin: 0 auto;
-      padding: 70px 18px 50px;
+      padding: 56px 16px 44px;
     }
 
     h1 {
-      font-weight: 600;
-      letter-spacing: 0.4px;
-      margin-bottom: 8px;
+      font-weight: 650;
+      letter-spacing: 0.3px;
+      margin: 0 0 10px 0;
+      font-size: 1.9rem;
+      line-height: 1.15;
     }
 
     p {
       color: #c2c7dc;
-      margin-bottom: 34px;
+      margin: 0 0 26px 0;
       line-height: 1.45;
+      font-size: 1.02rem;
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+      margin-top: 6px;
     }
 
     .link {
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding: 16px 18px;
-      margin: 14px 0;
-      border-radius: 16px;
+      gap: 14px;
+      padding: 16px 16px;
+      border-radius: 18px;
       text-decoration: none;
       color: #ffffff;
       background: rgba(255,255,255,0.12);
       backdrop-filter: blur(6px);
       -webkit-backdrop-filter: blur(6px);
       transition: background 0.25s ease, transform 0.15s ease;
+      min-height: 58px; /* comfy tap target */
     }
 
     .link:hover {
       background: rgba(255,255,255,0.18);
       transform: translateY(-1px);
+    }
+
+    .link:active {
+      transform: translateY(0px);
     }
 
     .link img {
@@ -68,52 +79,77 @@
       flex-shrink: 0;
     }
 
+    .link .label {
+      font-size: 1.06rem;
+      font-weight: 560;
+      letter-spacing: 0.1px;
+    }
+
+    .link.disabled {
+      opacity: 0.62;
+      cursor: default;
+    }
+    .link.disabled:hover {
+      background: rgba(255,255,255,0.12);
+      transform: none;
+    }
+
     footer {
-      margin-top: 48px;
+      margin-top: 34px;
       font-size: 0.85rem;
       color: #9aa2c4;
       text-align: center;
+    }
+
+    /* Mobile tuning (Instagram in-app browser friendly) */
+    @media (max-width: 480px) {
+      .container { padding: 44px 14px 38px; }
+      h1 { font-size: 1.75rem; }
+      p { font-size: 1rem; }
+      .link { padding: 16px 14px; border-radius: 16px; }
+      .link img { height: 26px; }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+    <h1>Sleep Sounds</h1>
+    <p>
+      Calming soundscapes for rest, focus, and deep sleep.
+      Find a sound you like, set it to <em>Repeat Single</em>, and let it play.
+    </p>
 
-    <h1>Sleep Sounds Favorites by David Farmer Sound</h1>
-    <p>Calming soundscapes for rest, focus, and deep sleep. Use the playlists below as a guide. Set the sound you like to "Repeat Single" and enjoy!  Thank you for your support!</p>
+    <div class="links">
+      <!-- APPLE MUSIC -->
+      <a class="link"
+         href="https://music.apple.com/us/playlist/davidfarmersound-favorites/pl.u-qxylX06I3WYXz"
+         target="_blank"
+         rel="noopener">
+        <img src="images/apple-music.png" alt="Apple Music">
+        <span class="label">Listen on Apple Music</span>
+      </a>
 
-    <!-- APPLE MUSIC -->
-    <a class="link"
-       href="https://music.apple.com/us/playlist/davidfarmersound-favorites/pl.u-qxylX06I3WYXz"
-       target="_blank"
-       rel="noopener">
-      <img src="images/apple-music.png" alt="Apple Music">
-      <span>Listen on Apple Music</span>
-    </a>
+      <!-- SPOTIFY (placeholder until ready) -->
+      <a class="link disabled"
+         href="#"
+         aria-disabled="true"
+         onclick="return false;">
+        <img src="images/spotify.png" alt="Spotify">
+        <span class="label">Spotify (coming soon)</span>
+      </a>
 
-    <!-- SPOTIFY (placeholder) -->
-    <a class="link"
-       href="#"
-       aria-disabled="true"
-       onclick="return false;">
-      <img src="images/spotify.png" alt="Spotify">
-      <span>Spotify — coming soon</span>
-    </a>
+      <!-- AMAZON MUSIC (placeholder until ready) -->
+      <a class="link disabled"
+         href="#"
+         aria-disabled="true"
+         onclick="return false;">
+        <img src="images/amazon-music.png" alt="Amazon Music">
+        <span class="label">Amazon Music (coming soon)</span>
+      </a>
+    </div>
 
-    <!-- AMAZON MUSIC (placeholder) -->
-    <a class="link"
-       href="#"
-       aria-disabled="true"
-       onclick="return false;">
-      <img src="images/amazon-music.png" alt="Amazon Music">
-      <span>Amazon Music — coming soon</span>
-    </a>
-
-    <footer>
-      © David Farmer
-    </footer>
-
+    <footer>© David Farmer</footer>
   </div>
 </body>
 </html>
