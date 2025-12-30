@@ -6,25 +6,40 @@
   <title>Sleep Sounds</title>
 
   <style>
+    /* RESET */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
+      margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #0b1220;
       color: #e6e8ee;
+      background:
+        linear-gradient(
+          rgba(11, 18, 32, 0.65),
+          rgba(11, 18, 32, 0.85)
+        ),
+        url("images/background.jpg") center / cover no-repeat fixed;
+      min-height: 100vh;
+    }
+
+    .container {
       max-width: 640px;
       margin: 0 auto;
-      padding: 60px 18px;
+      padding: 70px 18px 50px;
     }
 
     h1 {
       font-weight: 600;
-      letter-spacing: 0.3px;
-      margin-bottom: 6px;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
     }
 
     p {
-      color: #b9bfd3;
-      margin-bottom: 32px;
-      line-height: 1.4;
+      color: #c2c7dc;
+      margin-bottom: 34px;
+      line-height: 1.45;
     }
 
     .link {
@@ -33,16 +48,18 @@
       gap: 16px;
       padding: 16px 18px;
       margin: 14px 0;
-      border-radius: 14px;
+      border-radius: 16px;
       text-decoration: none;
-      background: rgba(255,255,255,0.08);
       color: #ffffff;
-      font-size: 1.05rem;
-      transition: background 0.2s ease;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      transition: background 0.25s ease, transform 0.15s ease;
     }
 
     .link:hover {
-      background: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.18);
+      transform: translateY(-1px);
     }
 
     .link img {
@@ -53,40 +70,42 @@
     }
 
     footer {
-      margin-top: 42px;
+      margin-top: 48px;
       font-size: 0.85rem;
-      color: #8f96b3;
+      color: #9aa2c4;
       text-align: center;
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <h1>Sleep Sounds</h1>
-  <p>Calming soundscapes for rest, focus, and deep sleep.</p>
+    <h1>Sleep Sounds</h1>
+    <p>Calming soundscapes for rest, focus, and deep sleep.</p>
 
-  <!-- APPLE MUSIC -->
-  <a class="link" href="https://example.com" target="_blank" rel="noopener">
-    <img src="images/apple-music.png" alt="Apple Music">
-    <span>Listen on Apple Music</span>
-  </a>
+    <!-- APPLE MUSIC -->
+    <a class="link" href="https://example.com" target="_blank" rel="noopener">
+      <img src="images/apple-music.png" alt="Apple Music">
+      <span>Listen on Apple Music</span>
+    </a>
 
-  <!-- SPOTIFY -->
-  <a class="link" href="https://example.com" target="_blank" rel="noopener">
-    <img src="images/spotify.png" alt="Spotify">
-    <span>Listen on Spotify</span>
-  </a>
+    <!-- SPOTIFY -->
+    <a class="link" href="https://example.com" target="_blank" rel="noopener">
+      <img src="images/spotify.png" alt="Spotify">
+      <span>Listen on Spotify</span>
+    </a>
 
-  <!-- AMAZON MUSIC -->
-  <a class="link" href="https://example.com" target="_blank" rel="noopener">
-    <img src="images/amazon-music.png" alt="Amazon Music">
-    <span>Listen on Amazon Music</span>
-  </a>
+    <!-- AMAZON MUSIC -->
+    <a class="link" href="https://example.com" target="_blank" rel="noopener">
+      <img src="images/amazon-music.png" alt="Amazon Music">
+      <span>Listen on Amazon Music</span>
+    </a>
 
-  <footer>
-    © David Farmer
-  </footer>
+    <footer>
+      © David Farmer
+    </footer>
 
+  </div>
 </body>
 </html>
