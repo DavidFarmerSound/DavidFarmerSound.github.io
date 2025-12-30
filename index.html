@@ -12,26 +12,25 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: #e6e8ee;
-      background:
-        linear-gradient(
-          rgba(8, 14, 26, 0.82),
-          rgba(8, 14, 26, 0.94)
-        ),
-        url("images/background-ocean.jpg") center / cover no-repeat fixed;
+      background: linear-gradient(
+        180deg,
+        #0b1220 0%,
+        #060b16 100%
+      );
       min-height: 100vh;
     }
 
     .container {
       max-width: 640px;
       margin: 0 auto;
-      padding: 56px 16px 44px;
+      padding: 52px 16px 42px;
     }
 
     h1 {
       font-weight: 650;
       letter-spacing: 0.3px;
       margin: 0 0 10px 0;
-      font-size: 1.9rem;
+      font-size: 1.85rem;
       line-height: 1.15;
     }
 
@@ -56,20 +55,18 @@
       border-radius: 18px;
       text-decoration: none;
       color: #ffffff;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
+      background: rgba(255,255,255,0.10);
       transition: background 0.25s ease, transform 0.15s ease;
-      min-height: 58px; /* comfy tap target */
+      min-height: 58px;
     }
 
     .link:hover {
-      background: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.16);
       transform: translateY(-1px);
     }
 
     .link:active {
-      transform: translateY(0px);
+      transform: translateY(0);
     }
 
     .link img {
@@ -79,19 +76,10 @@
       flex-shrink: 0;
     }
 
-    .link .label {
-      font-size: 1.06rem;
+    .label {
+      font-size: 1.05rem;
       font-weight: 560;
       letter-spacing: 0.1px;
-    }
-
-    .link.disabled {
-      opacity: 0.62;
-      cursor: default;
-    }
-    .link.disabled:hover {
-      background: rgba(255,255,255,0.12);
-      transform: none;
     }
 
     footer {
@@ -101,12 +89,11 @@
       text-align: center;
     }
 
-    /* Mobile tuning (Instagram in-app browser friendly) */
     @media (max-width: 480px) {
       .container { padding: 44px 14px 38px; }
-      h1 { font-size: 1.75rem; }
+      h1 { font-size: 1.7rem; }
       p { font-size: 1rem; }
-      .link { padding: 16px 14px; border-radius: 16px; }
+      .link { border-radius: 16px; }
       .link img { height: 26px; }
     }
   </style>
@@ -139,13 +126,13 @@
         <span class="label">Listen on Spotify</span>
       </a>
 
-      <!-- AMAZON MUSIC (placeholder until ready) -->
-      <a class="link disabled"
+      <!-- AMAZON MUSIC (add link when ready) -->
+      <a class="link"
          href="#"
          aria-disabled="true"
          onclick="return false;">
         <img src="images/amazon-music.png" alt="Amazon Music">
-        <span class="label">Amazon Music (coming soon)</span>
+        <span class="label">Amazon Music</span>
       </a>
     </div>
 
