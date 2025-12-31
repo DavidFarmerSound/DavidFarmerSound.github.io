@@ -12,11 +12,7 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: #e6e8ee;
-      background: linear-gradient(
-        180deg,
-        #0b1220 0%,
-        #060b16 100%
-      );
+      background: linear-gradient(180deg, #0b1220 0%, #060b16 100%);
       min-height: 100vh;
     }
 
@@ -53,11 +49,11 @@
       margin-top: 6px;
     }
 
-    /* BUTTON */
     .link {
       display: flex;
       align-items: center;
-      gap: 14px;
+      justify-content: space-between; /* text left, logo right */
+      gap: 12px;
       padding: 16px 16px;
       border-radius: 18px;
       text-decoration: none;
@@ -75,26 +71,29 @@
       transform: translateY(0);
     }
 
-    /* FIXED ICON COLUMN */
-    .icon {
-      width: 36px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-shrink: 0;
-    }
-
-    .icon img {
-      height: 28px;
-      width: auto;
-      opacity: 0.95;
-    }
-
-    .link .label {
+    .label {
       color: #cfd4e6;
       font-size: 1.05rem;
       font-weight: 560;
       letter-spacing: 0.1px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 10px; /* breathing room before logo */
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      height: 28px;
+      width: auto;
+      opacity: 0.95;
+      max-width: 140px; /* prevents huge wordmarks from taking over */
     }
 
     footer {
@@ -109,7 +108,7 @@
       h1 { font-size: 1.7rem; }
       p { font-size: 1rem; }
       .link { border-radius: 16px; }
-      .icon img { height: 26px; }
+      .logo img { height: 26px; max-width: 120px; }
     }
   </style>
 </head>
@@ -130,10 +129,10 @@
          href="https://music.apple.com/us/playlist/davidfarmersound-favorites/pl.u-qxylX06I3WYXz"
          target="_blank"
          rel="noopener">
-        <span class="icon">
+        <span class="label">Listen on Apple Music</span>
+        <span class="logo">
           <img src="images/apple-music.png" alt="Apple Music">
         </span>
-        <span class="label">Listen on Apple Music</span>
       </a>
 
       <!-- SPOTIFY -->
@@ -141,10 +140,10 @@
          href="https://open.spotify.com/playlist/3s0lOwUU3jymOYmAxwZFLt?si=fa39329ef489441a"
          target="_blank"
          rel="noopener">
-        <span class="icon">
+        <span class="label">Listen on Spotify</span>
+        <span class="logo">
           <img src="images/spotify.png" alt="Spotify">
         </span>
-        <span class="label">Listen on Spotify</span>
       </a>
 
       <!-- AMAZON MUSIC -->
@@ -152,10 +151,10 @@
          href="https://music.amazon.com/user-playlists/01d402d654fa48e39c41195757e78c1dsune?ref=dm_sh_r8BEtiCijBeTvZdU66tgDmsbd"
          target="_blank"
          rel="noopener">
-        <span class="icon">
+        <span class="label">Listen on Amazon Music</span>
+        <span class="logo">
           <img src="images/amazon-music.png" alt="Amazon Music">
         </span>
-        <span class="label">Listen on Amazon Music</span>
       </a>
     </div>
 
