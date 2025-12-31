@@ -12,7 +12,11 @@
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       color: #e6e8ee;
-      background: linear-gradient(180deg, #0b1220 0%, #060b16 100%);
+      background: linear-gradient(
+        180deg,
+        #0b1220 0%,
+        #060b16 100%
+      );
       min-height: 100vh;
     }
 
@@ -49,12 +53,12 @@
       margin-top: 6px;
     }
 
+    /* BUTTON */
     .link {
       display: flex;
       align-items: center;
-      justify-content: space-between; /* text left, logo right */
-      gap: 12px;
-      padding: 16px 16px;
+      justify-content: space-between;
+      padding: 16px 18px;
       border-radius: 18px;
       text-decoration: none;
       background: rgba(255,255,255,0.10);
@@ -71,6 +75,7 @@
       transform: translateY(0);
     }
 
+    /* TEXT */
     .label {
       color: #cfd4e6;
       font-size: 1.05rem;
@@ -79,21 +84,23 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      padding-right: 10px; /* breathing room before logo */
+      padding-right: 12px;
     }
 
+    /* LOGO COLUMN (CENTERED) */
     .logo {
+      width: 140px;                /* consistent column width */
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
+      justify-content: center;     /* center horizontally */
+      align-items: center;         /* center vertically */
       flex-shrink: 0;
     }
 
     .logo img {
       height: 28px;
       width: auto;
+      max-width: 100%;
       opacity: 0.95;
-      max-width: 140px; /* prevents huge wordmarks from taking over */
     }
 
     footer {
@@ -108,7 +115,8 @@
       h1 { font-size: 1.7rem; }
       p { font-size: 1rem; }
       .link { border-radius: 16px; }
-      .logo img { height: 26px; max-width: 120px; }
+      .logo { width: 120px; }
+      .logo img { height: 26px; }
     }
   </style>
 </head>
