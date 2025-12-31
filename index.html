@@ -53,6 +53,7 @@
       margin-top: 6px;
     }
 
+    /* BUTTON */
     .link {
       display: flex;
       align-items: center;
@@ -74,16 +75,23 @@
       transform: translateY(0);
     }
 
-    .link img {
-      height: 28px;
-      width: auto;
-      opacity: 0.95;
+    /* FIXED ICON COLUMN */
+    .icon {
+      width: 36px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       flex-shrink: 0;
     }
 
-    /* More visible difference vs the white logos */
+    .icon img {
+      height: 28px;
+      width: auto;
+      opacity: 0.95;
+    }
+
     .link .label {
-      color: #cfd4e6 !important;
+      color: #cfd4e6;
       font-size: 1.05rem;
       font-weight: 560;
       letter-spacing: 0.1px;
@@ -101,7 +109,7 @@
       h1 { font-size: 1.7rem; }
       p { font-size: 1rem; }
       .link { border-radius: 16px; }
-      .link img { height: 26px; }
+      .icon img { height: 26px; }
     }
   </style>
 </head>
@@ -122,7 +130,9 @@
          href="https://music.apple.com/us/playlist/davidfarmersound-favorites/pl.u-qxylX06I3WYXz"
          target="_blank"
          rel="noopener">
-        <img src="images/apple-music.png" alt="Apple Music">
+        <span class="icon">
+          <img src="images/apple-music.png" alt="Apple Music">
+        </span>
         <span class="label">Listen on Apple Music</span>
       </a>
 
@@ -131,7 +141,9 @@
          href="https://open.spotify.com/playlist/3s0lOwUU3jymOYmAxwZFLt?si=fa39329ef489441a"
          target="_blank"
          rel="noopener">
-        <img src="images/spotify.png" alt="Spotify">
+        <span class="icon">
+          <img src="images/spotify.png" alt="Spotify">
+        </span>
         <span class="label">Listen on Spotify</span>
       </a>
 
@@ -140,7 +152,9 @@
          href="https://music.amazon.com/user-playlists/01d402d654fa48e39c41195757e78c1dsune?ref=dm_sh_r8BEtiCijBeTvZdU66tgDmsbd"
          target="_blank"
          rel="noopener">
-        <img src="images/amazon-music.png" alt="Amazon Music">
+        <span class="icon">
+          <img src="images/amazon-music.png" alt="Amazon Music">
+        </span>
         <span class="label">Listen on Amazon Music</span>
       </a>
     </div>
