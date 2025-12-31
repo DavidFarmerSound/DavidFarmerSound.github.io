@@ -42,18 +42,23 @@
 
     p {
       color: #c2c7dc;
-      margin: 0 0 26px 0;
+      margin: 0 0 18px 0;
       line-height: 1.45;
       font-size: 1.02rem;
+    }
+
+    /* Instruction paragraph */
+    .instruction {
+      margin-top: -6px;
+      color: #b9bfd3;
     }
 
     .links {
       display: grid;
       gap: 14px;
-      margin-top: 6px;
+      margin-top: 24px;
     }
 
-    /* BUTTON */
     .link {
       display: flex;
       align-items: center;
@@ -75,7 +80,6 @@
       transform: translateY(0);
     }
 
-    /* TEXT */
     .label {
       color: #cfd4e6;
       font-size: 1.05rem;
@@ -87,12 +91,11 @@
       padding-right: 12px;
     }
 
-    /* LOGO COLUMN (CENTERED) */
     .logo {
-      width: 140px;                /* consistent column width */
+      width: 140px;
       display: flex;
-      justify-content: center;     /* center horizontally */
-      align-items: center;         /* center vertically */
+      justify-content: center;
+      align-items: center;
       flex-shrink: 0;
     }
 
@@ -126,11 +129,14 @@
 
     <h1>Sleep Sounds</h1>
     <p class="byline">by David Farmer Sound</p>
-<p>
-  Calming soundscapes for rest, focus, and deep sleep.
-  Pick a sound. Set it to <em>Repeat Single</em>. Let it play.
-</p>
 
+    <p>
+      Calming soundscapes for rest, focus, and deep sleep.
+    </p>
+
+    <p class="instruction">
+      Pick a sound. Set it to <em>Repeat Single</em>. Let it play.
+    </p>
 
     <div class="links">
       <!-- APPLE MUSIC -->
