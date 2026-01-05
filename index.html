@@ -34,12 +34,6 @@
       line-height: 1.15;
     }
 
-    .byline {
-      margin: 0 0 18px 0;
-      font-size: 0.95rem;
-      color: #9aa2c4;
-    }
-
     p {
       color: #c2c7dc;
       margin: 0 0 18px 0;
@@ -47,24 +41,20 @@
       font-size: 1.02rem;
     }
 
-    /* Suggestion #1: make the first description line feel slightly more secondary */
-    p:first-of-type {
+    /* Slightly smaller, calmer copy under the title */
+    .description,
+    .instruction {
+      font-size: 0.96rem;
       color: #b9bfd3;
     }
 
     .instruction {
       margin-top: -6px;
-      color: #b9bfd3;
     }
 
     .links {
       display: grid;
       gap: 14px;
-      margin-top: 24px;
-    }
-
-    /* Suggestion #2: add a hair more separation before the links */
-    .links {
       margin-top: 28px;
     }
 
@@ -135,6 +125,8 @@
       .container { padding: 44px 14px 38px; }
       h1 { font-size: 1.7rem; }
       p { font-size: 1rem; }
+      .description,
+      .instruction { font-size: 0.94rem; }
       .link { border-radius: 16px; }
       .logo { width: 120px; }
       .logo img { height: 26px; }
@@ -148,7 +140,7 @@
     <h1>Sleep Sounds</h1>
     <!-- <p class="byline">by David Farmer Sound</p> -->
 
-    <p>
+    <p class="description">
       Calming soundscapes for focus and deep sleep.
     </p>
 
