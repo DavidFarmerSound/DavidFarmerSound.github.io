@@ -41,7 +41,6 @@
       font-size: 1.02rem;
     }
 
-    /* Slightly smaller, calmer copy under the title */
     .description,
     .instruction {
       font-size: 0.96rem;
@@ -105,8 +104,28 @@
       opacity: 0.95;
     }
 
+    /* Subtle "Other links" text */
+    .other-links {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 0.88rem;
+      opacity: 0.85;
+    }
+
+    .other-links a {
+      color: #9aa2c4;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(154,162,196,0.35);
+      padding-bottom: 2px;
+    }
+
+    .other-links a:hover {
+      color: #e6e8ee;
+      border-bottom-color: rgba(230,232,238,0.6);
+    }
+
     footer {
-      margin-top: 34px;
+      margin-top: 24px;
       font-size: 0.85rem;
       color: #9aa2c4;
       text-align: center;
@@ -182,6 +201,11 @@
         </span>
       </a>
     </div>
+
+    <!-- Very subtle secondary navigation -->
+    <p class="other-links">
+      <a href="other-links.html">Other links →</a>
+    </p>
 
     <footer>
       <div>Multiple artist names — by © David Farmer</div>
